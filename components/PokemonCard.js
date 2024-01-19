@@ -52,13 +52,19 @@ const getTypeDetails = (type) => {
 
          <View style={styles.movesContainer}>
             <Text style={styles.movesText}>
-                Moves: {moves.join(', ')}
+                Moves: 
+                <Text style={styles.items}>
+                    {moves.join(', ')}
+                </Text>
             </Text>
          </View>
 
          <View styles={styles.weaknessesContainer}>
             <Text style={styles.weaknessesText}>
-                Weaknesses: {weaknesses.join(', ')}
+                Weaknesses: 
+                <Text style={styles.items}>
+                    {weaknesses.join(', ')}
+                </Text>
             </Text>
          </View>
        </View> 
@@ -127,8 +133,16 @@ const styles = StyleSheet.create({
         marginBottom: 16
     },
     movesText: {
+        width: '100%',
         fontSize: 22,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        display: "flex",
+    },
+    items:{
+        fontSize: 18,
+        fontWeight: '500',
+        margin: 10,
+        display: 'flex'
     },
     weaknessesContainer:{
         marginBottom: 8
